@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   get items(): readonly TodoItem[]{
-    return this.list.items.filter(item => !item.complete);
+    return this.list.items.filter(item => this.showComplete || !item.complete);
   }
 
   addItem(newItem) {
@@ -31,4 +31,6 @@ export class AppComponent {
       this.list.addItem(newItem);
     }
   }
+
+  showComplete: boolean = false;
 }
