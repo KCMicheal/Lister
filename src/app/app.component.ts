@@ -12,6 +12,7 @@ export class AppComponent {
     new TodoItem("Go for run", true),
     new TodoItem("Get flowers"),
     new TodoItem("Collect tickets"),
+    new TodoItem("Make dinner.")
   ]);
 
   get username(): string {
